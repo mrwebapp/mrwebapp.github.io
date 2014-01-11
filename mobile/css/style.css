@@ -1,0 +1,175 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
+ol,ul{list-style:none;margin:0;padding:0;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
+table{border-collapse:collapse;border-spacing:0;}
+/* start editing from here */
+a{text-decoration:none;}
+.txt-rt{text-align:right;}/* text align right */
+.txt-lt{text-align:left;}/* text align left */
+.txt-center{text-align:center;}/* text align center */
+.float-rt{float:right;}/* float right */
+.float-lt{float:left;}/* float left */
+.clear{clear:both;}/* clear float */
+.pos-relative{position:relative;}/* Position Relative */
+.pos-absolute{position:absolute;}/* Position Absolute */
+.vertical-base{	vertical-align:baseline;}/* vertical align baseline */
+.vertical-top{	vertical-align:top;}/* vertical align top */
+.underline{	padding-bottom:5px;	border-bottom: 1px solid #eee; margin:0 0 20px 0;}/* Add 5px bottom padding and a underline */
+nav.vertical ul li{	display:block;}/* vertical menu */
+nav.horizontal ul li{	display: inline-block;}/* horizontal menu */
+img{max-width:100%;}
+/*end reset*/
+body {
+    background: url(../images/bg.png) no-repeat #fff;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	 font-family: Arial, Helvetica, sans-serif;
+	font-weight: 300;
+
+}
+.wrap {
+	padding:0px 10px;
+	margin: 0px auto;
+}
+.content{
+
+}
+.content-grid  {
+	width: 230px;
+	margin: -20px auto;
+}
+input[type="text"] {
+	 font-family: Arial, Helvetica, sans-serif;
+	border: none;
+	font-size: 0.7em;
+	display: inline;
+	padding: 10.7px 5px;
+	background: #f5f5f5;
+	outline: none;
+	width: 70%;
+	vertical-align: middle;
+	-webkit-appearance: none;
+}
+form {
+	margin-bottom: 0;
+	text-align: center;
+	width: 100%;
+}
+.grid img {
+	width: 283px;
+}
+.grid  {
+	text-align: center;
+	margin-top: 1.5em;
+}
+.grid h3 {
+	 font-family: Arial, Helvetica, sans-serif;
+	color: #FFF;
+	display: block;
+	font-size: 0.8em;
+	font-weight: 600;
+	text-align: center;
+	padding-bottom: 1.8em;
+	padding-top: 0.8em;
+}
+.footer
+{
+
+}
+.footer p.a {
+
+	display: block;
+	line-height: 1.8em;
+	text-align: center;
+	margin-top: 2.5em;
+}
+.footer p.a a img{
+	width: 90px;
+}
+.footer p {
+	 font-family: Arial, Helvetica, sans-serif;
+	color: rgba(14, 151, 243, 0.63);
+	display: block;
+	font-size: 0.8em;
+	font-weight: 100;
+	line-height: 1.8em;
+	text-align: center;
+}
+.footer p.a a{
+	color: #000;
+	font-weight: 900;
+}
+.footer p a{
+	color: #0E97F3;
+}
+.footer p a:hover{
+	color: #fff;
+}
+.btn {
+	background: #0d7ec4;
+   cursor: pointer;
+	padding: 17px 17px;
+	display: inline-block;
+	position: relative;
+	vertical-align: middle;
+	margin-left: -46px;
+	text-indent: -9999px;
+	margin-top: 0.8px;
+	outline: none;
+	width:42px;
+	height: 14px;
+	border:none;
+	-webkit-appearance: none;
+}
+.btn:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+}
+button span{
+	background: url(../images/arrow.png) repeat-x -8px -3px;
+	height: 14px;
+	width: 21px;
+	display: block;
+	top: 11px;
+	position: absolute;
+	left: 8px;
+	outline: none;
+	-webkit-appearance: none;
+}
+/* Button 4 */
+.btn-4 {
+	border: 2px solid #0E2955;
+	color: #fff;
+	overflow: hidden;
+}
+
+.btn-4:active {
+	color: #17954c;
+}
+
+button span:hover {
+	background: url(../images/arrow.png) repeat-x -10px -3px;
+	height: 14px;
+	width: 21px;
+	display: block;
+	outline: none;
+	border: none;
+}
+
+.btn-4:before {
+	position: absolute;
+	left:70%;
+	display:none;
+}
+
+.btn-4:active:before {
+	color: #17954c;
+	left: 20%;
+	opacity: 0;
+	top: 20px;
+}

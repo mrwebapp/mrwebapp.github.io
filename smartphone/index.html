@@ -7,42 +7,66 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
 <head>
-     <title>The Coming soon Website Template | Home :: w3layouts</title>
+     <title>Quanty</title>
 	<link href="smartphone/css/style.css" rel="stylesheet" type="text/css" media="all" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="keywords" content="SUBSCRIBE iphone web template, Andriod web template, Smartphone web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-	<link href='http://fonts.googleapis.com/css?family=Petit+Formal+Script' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:300,400' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300' rel='stylesheet' type='text/css'>
+	<script type="application/x-javascript">
+        addEventListener("load", function() {
+                setTimeout(hideURLbar, 0); }, false);
+        function hideURLbar(){ window.scrollTo(0,1); }
+    </script>
 	</head>
-	<body>
-	<div class="content">
-			<div class="wrap">
-				<div class="content-grid">
-				<img src="smartphone/images/top.png" alt="" />
-				</div>
-				<div class="grid">
-		<img src="smartphone/images/coming.png" alt="" />
-		<h3>We are Still Working on it.</h3>
+	<body onload="getLocation()">
+        <div id="mapholder"></div>
+        <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+        <script>
+        var x=document.getElementById("demo");
+        function getLocation()
+          {
+          if (navigator.geolocation)
+            {
+            navigator.geolocation.getCurrentPosition(showPosition,showError);
+            }
+          else{x.innerHTML="Geolocation is not supported by this browser.";}
+          }
 
-		<form>
-									<input type="text" size="30" value="Your Email and Get Notified..." onblur="if (this.value=='') this.value = 'Your Email and Get Notified...'" onfocus="if (this.value=='Your Email and Get Notified...') this.value = ''" name="email" id="email">
-									<a href="#"><button class="btn span btn-4 btn-4a icon-arrow-right"><span></span></button></a>
+        function showPosition(position)
+          {
+          lat=position.coords.latitude;
+          lon=position.coords.longitude;
+          latlon=new google.maps.LatLng(lat, lon)
+          mapholder=document.getElementById('mapholder')
 
-									<div id="response"></div>
+          var myOptions={
+          center:latlon,zoom:14,
+          mapTypeId:google.maps.MapTypeId.ROADMAP,
+          mapTypeControl:false,
+           disableDefaultUI: true,
+              //navigationControlOptions:{style:google.maps.NavigationControlStyle.SMALL}
+          };
+          var map=new google.maps.Map(document.getElementById("mapholder"),myOptions);
+          var marker=new google.maps.Marker({position:latlon,map:map,title:"You are here!"});
+          }
 
-								</form>
-								<div class="clear"></div>
-								</div>
-		<div class="clear"></div>
-		<div class="footer">
-			<p class="a"><a href="#"><img src="smartphone/images/facebook.png" alt="" /></a><a href="#"><img src="smartphone/images/twitter.png" alt="" /></a></p>
-		<p>Copyright 2013 Template by <a href="http://w3layouts.com"> w3layouts.com</a> </p>
-		</div>
-		<div class="clear"></div>
-		</div>
-		</div>
-</body>
+        function showError(error)
+          {
+          switch(error.code)
+            {
+            case error.PERMISSION_DENIED:
+              x.innerHTML="User denied the request for Geolocation."
+              break;
+            case error.POSITION_UNAVAILABLE:
+              x.innerHTML="Location information is unavailable."
+              break;
+            case error.TIMEOUT:
+              x.innerHTML="The request to get user location timed out."
+              break;
+            case error.UNKNOWN_ERROR:
+              x.innerHTML="An unknown error occurred."
+              break;
+            }
+          }
+        </script>
+    </body>
 </html>

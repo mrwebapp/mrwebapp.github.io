@@ -1,0 +1,14 @@
+html,body {
+	height: 100%;
+	margin: 0;
+}
+
+#mapholder {
+	height: 25%;
+	margin: 0;
+    z-index:-1;
+}
+
+.pull-right {
+	margin-right: 8px;
+}

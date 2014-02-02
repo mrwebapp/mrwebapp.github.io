@@ -1,0 +1,33 @@
+2014-02-02 14:39:04: ----- Auftrag 'Neuer Auftrag': ANALYSE gestartet durch On File Change Incremental auf folgendem PC 'Andreas Islers MacBook Pro' (GoodSync v 4.4.7.7) -----
+2014-02-02 14:39:04: ftp://openmetrics.ch/httpdocs/andi <-> /Users/aisler/Sites/Quanty, NoWaitForLocks, UberUnlocked, ResolveConflicts=RightToLeft
+2014-02-02 14:39:04: Change in: /Users/aisler/Sites/Quanty/.git/logs/refs/stash
+2014-02-02 14:39:04: Change in: /Users/aisler/Sites/Quanty/.git/objects/4b/962aa96d441b52768853d8a39ffbffef735d09
+2014-02-02 14:39:04: Change in: /Users/aisler/Sites/Quanty/.git/objects/4b
+2014-02-02 14:39:04: Change in: /Users/aisler/Sites/Quanty/.git/objects/65/c929cf1212923fe1969dbb1e106f09a88d97dd
+2014-02-02 14:39:04: Change in: /Users/aisler/Sites/Quanty/.git/index
+2014-02-02 14:39:04: Change in: /Users/aisler/Sites/Quanty/.git/objects/49/c3d50fa9e2d0188d7560e789507a6037ff36df
+2014-02-02 14:39:04: Change in: /Users/aisler/Sites/Quanty/.git/index.lock
+2014-02-02 14:39:04: Change in: /Users/aisler/Sites/Quanty/.git/objects/84/383fb18f62bb2731057f1ad621e05ef0a1755e
+2014-02-02 14:39:04: Change in: /Users/aisler/Sites/Quanty/.git/objects/6a/ce598a1fa4378b004d11fa9c2c22cf8135028c
+2014-02-02 14:39:04: Änderungen: 7, Konflikte: 0, Kopierdauer: 0, Kopierstatus: 0/1, Fehler: 0
+2014-02-02 14:39:04: Right to Left: Copy File: 7 
+2014-02-02 14:39:04: ----- Analyse abgeschlossen. Dauer 00:00:00, Geschwindigkeit: Many Datei/en -----
+2014-02-02 14:39:04: ===== Auftrag 'Neuer Auftrag': SYNC gestartet durch On File Change Incremental durch folgenden PC 'Andreas Islers MacBook Pro' =====
+2014-02-02 14:39:04: ftp://openmetrics.ch/httpdocs/andi <-> /Users/aisler/Sites/Quanty, NoWaitForLocks, UberUnlocked, ResolveConflicts=RightToLeft
+2014-02-02 14:39:04: Erstelle Ordner 'ftp://openmetrics.ch/httpdocs/andi/.git/objects/4b'
+- FEHLER: Cannot create folder: Server says: /httpdocs/andi/.git/objects/4b: No such file or directory
+2014-02-02 14:39:04: Kopiere erneut '/Users/aisler/Sites/Quanty/.git/logs/refs/stash' -> 'ftp://openmetrics.ch/httpdocs/andi/.git/logs/refs/stash'
+- FEHLER: Cannot rename temp file to destination file: Server says: Rename /httpdocs/andi/.git/logs/refs/stash: No such file or directory, Deleting: Server says: /httpdocs/andi/.git/logs/refs/stash: No such file or directory
+2014-02-02 14:39:04: Kopiere erneut '/Users/aisler/Sites/Quanty/.git/objects/49/c3d50fa9e2d0188d7560e789507a6037ff36df' -> 'ftp://openmetrics.ch/httpdocs/andi/.git/objects/49/c3d50fa9e2d0188d7560e789507a6037ff36df'
+- FEHLER: Cannot rename temp file to destination file: Server says: Rename /httpdocs/andi/.git/objects/49/c3d50fa9e2d0188d7560e789507a6037ff36df: No such file or directory, Deleting: Server says: /httpdocs/andi/.git/objects/49/c3d50fa9e2d0188d7560e789507a6037ff36df: No such file or directory
+2014-02-02 14:39:04: Kopiere erneut '/Users/aisler/Sites/Quanty/.git/objects/65/c929cf1212923fe1969dbb1e106f09a88d97dd' -> 'ftp://openmetrics.ch/httpdocs/andi/.git/objects/65/c929cf1212923fe1969dbb1e106f09a88d97dd'
+- FEHLER: Cannot rename temp file to destination file: Server says: Rename /httpdocs/andi/.git/objects/65/c929cf1212923fe1969dbb1e106f09a88d97dd: No such file or directory, Deleting: Server says: /httpdocs/andi/.git/objects/65/c929cf1212923fe1969dbb1e106f09a88d97dd: No such file or directory
+2014-02-02 14:39:04: Kopiere erneut '/Users/aisler/Sites/Quanty/.git/objects/6a/ce598a1fa4378b004d11fa9c2c22cf8135028c' -> 'ftp://openmetrics.ch/httpdocs/andi/.git/objects/6a/ce598a1fa4378b004d11fa9c2c22cf8135028c'
+- FEHLER: Cannot rename temp file to destination file: Server says: Rename /httpdocs/andi/.git/objects/6a/ce598a1fa4378b004d11fa9c2c22cf8135028c: No such file or directory, Deleting: Server says: /httpdocs/andi/.git/objects/6a/ce598a1fa4378b004d11fa9c2c22cf8135028c: No such file or directory
+2014-02-02 14:39:05: Kopiere erneut '/Users/aisler/Sites/Quanty/.git/objects/84/383fb18f62bb2731057f1ad621e05ef0a1755e' -> 'ftp://openmetrics.ch/httpdocs/andi/.git/objects/84/383fb18f62bb2731057f1ad621e05ef0a1755e'
+- FEHLER: Cannot rename temp file to destination file: Server says: Rename /httpdocs/andi/.git/objects/84/383fb18f62bb2731057f1ad621e05ef0a1755e: No such file or directory, Deleting: Server says: /httpdocs/andi/.git/objects/84/383fb18f62bb2731057f1ad621e05ef0a1755e: No such file or directory
+2014-02-02 14:39:05: Sichere den Dateistatus ftp://openmetrics.ch/httpdocs/andi/_gsdata_/_file_state_v4._gs
+2014-02-02 14:39:05: Sync mit 6 Fehlern beendet. Klicke auf das Fehler-Feld um die sync Fehler anzuzeigen
+2014-02-02 14:39:05: Sync Dateien OK: 1, Fehler: 6
+2014-02-02 14:39:05: ===== Sync abgeschlossen. Dauer: 00:00:01, Geschwindigkeit: 2.7 KB/s =====
+2014-02-02 14:39:05: 

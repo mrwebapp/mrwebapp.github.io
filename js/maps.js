@@ -39,7 +39,9 @@ function showPosition(position)
 	 geocoder.geocode({'latLng': latlon}, function(results, status) {
     if (status == google.maps.GeocoderStatus.OK) {
       if (results[1]) {
-      address.innerHTML=results[1].address_components[0].long_name;
+
+      address.innerHTML=results[0].formatted_address;
+//      address.innerHTML=results[1].address_components[0].long_name;
       } else {
         alert('No results found');
       }
@@ -48,12 +50,6 @@ function showPosition(position)
     }
   });
 
-
-
-	  var geoloc=$.get("http://maps.googleapis.com/maps/api/geocode/json?latlng=40.714224,-73.961452&sensor=true")
-
-
-	  address.innerHTML= geoloc.results[1].formatted_address;
   }
 
 function showError(error)

@@ -8,6 +8,7 @@ html,body {
     width: 100%;
     top: 0;
 	position: fixed !important;
+	z-index: 1;
 }
 
 .pull-right {
@@ -17,5 +18,16 @@ html,body {
 .below-map {
 	top:110px;
 	position: absolute;
+	z-index:-1;
 }
 
+
+#address {
+	background-color: white;
+	z-index: 20000000;
+	margin-top:75px;
+	height: 10px;
+	width: 100%;
+	position: fixed;
+	padding:15px;
+}

@@ -1,13 +1,6 @@
-//function initialize() {
-//        var mapOptions = {
-//          center: new google.maps.LatLng(-34.397, 150.644),
-//          zoom: 8,
-//          mapTypeId: google.maps.MapTypeId.ROADMAP
-//        };
-//        var map = new google.maps.Map(document.getElementById("mapholder"),
-//            mapOptions);
-//      }
-//
+// ----------------------------------
+// General
+// ----------------------------------
 
 function toggle_visibility(id) {
        var e = document.getElementById(id);
@@ -18,6 +11,12 @@ function toggle_visibility(id) {
     }
 
 var x = document.getElementById("error");
+
+
+// ----------------------------------
+// Maps API related Functions
+// ----------------------------------
+
 function getLocation()
   {
   if (navigator.geolocation)
@@ -46,19 +45,26 @@ function showPosition(position)
   var marker=new google.maps.Marker({position:latlon,map:map,title:"You are here!"});
 	 geocoder = new google.maps.Geocoder();
 	 geocoder.geocode({'latLng': latlon}, function(results, status) {
-    if (status == google.maps.GeocoderStatus.OK) {
-      if (results[1]) {
-
-      address.innerHTML=results[0].formatted_address;
+     if (status == google.maps.GeocoderStatus.OK) {
+      	if (results[1]) {
+      	address.innerHTML=results[0].formatted_address;
 //      address.innerHTML=results[1].address_components[0].long_name;
-      } else {
-        alert('No results found');
-      }
-    } else {
-      alert('Geocoder failed due to: ' + status);
-    }
-  });
 
+
+   			//var zip = '4103';
+	 		var zip = results[0].address_components[8].long_name;
+	 		//$('div#content').text(zip);
+		  	if($.trim(zip) != ''){
+			  	$.post( "ajax/return.php", { zip: zip}, function(data) {
+		 	//$.post('ajax/return.php', 'zip: zip', function(data) {
+			 		$('div#content').text(data)});
+	  			} else {
+        			alert('No results found');
+	  			}
+    		} else {
+      			alert('Geocoder failed due to: ' + status);
+    		}
+	 }});
   }
 
 function showError(error)
@@ -80,3 +86,13 @@ function showError(error)
 	  break;
 	}
   }
+
+// ----------------------------------
+// Data
+// ----------------------------------
+
+// Get Data
+ $('#getloc').click(function() {
+	 //alert('hello');
+
+ });

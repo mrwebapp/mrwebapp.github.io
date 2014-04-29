@@ -1,18 +1,59 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-     <title>The Coming soon Website Template | Home :: w3layouts</title>
-	<link href="web/css/style.css" rel="stylesheet" type="text/css" media="all" />
-	<link href='http://fonts.googleapis.com/css?family=Petit+Formal+Script' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:300,400' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300' rel='stylesheet' type='text/css'>
-	</head>
-	<body>
-		<div class="content">
+     <title>Quanty</title>
+	 <link href="web/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    </head>
+<body onload="getLocation()">
+        <div id="mapholder"></div>
+        <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+        <script>
+        var x=document.getElementById("demo");
+        function getLocation()
+          {
+          if (navigator.geolocation)
+            {
+            navigator.geolocation.getCurrentPosition(showPosition,showError);
+            }
+          else{x.innerHTML="Geolocation is not supported by this browser.";}
+          }
 
-		<h3>Only Smartphone support, so far</h3>
+        function showPosition(position)
+          {
+          lat=position.coords.latitude;
+          lon=position.coords.longitude;
+          latlon=new google.maps.LatLng(lat, lon)
+          mapholder=document.getElementById('mapholder')
 
-		</div>
-		<div class="clear"></div>
-</body>
+          var myOptions={
+          center:latlon,zoom:14,
+          mapTypeId:google.maps.MapTypeId.ROADMAP,
+          mapTypeControl:false,
+           disableDefaultUI: true,
+              //navigationControlOptions:{style:google.maps.NavigationControlStyle.SMALL}
+          };
+          var map=new google.maps.Map(document.getElementById("mapholder"),myOptions);
+          var marker=new google.maps.Marker({position:latlon,map:map,title:"You are here!"});
+          }
+
+        function showError(error)
+          {
+          switch(error.code)
+            {
+            case error.PERMISSION_DENIED:
+              x.innerHTML="User denied the request for Geolocation."
+              break;
+            case error.POSITION_UNAVAILABLE:
+              x.innerHTML="Location information is unavailable."
+              break;
+            case error.TIMEOUT:
+              x.innerHTML="The request to get user location timed out."
+              break;
+            case error.UNKNOWN_ERROR:
+              x.innerHTML="An unknown error occurred."
+              break;
+            }
+          }
+        </script>
+    </body>
 </html>

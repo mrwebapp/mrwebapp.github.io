@@ -4,3 +4,4 @@
 _gsdata_/
 .Rproj.user
 Quanty.Rproj
+packrat/lib*/

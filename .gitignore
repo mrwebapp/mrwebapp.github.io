@@ -1,5 +1,4 @@
 ## generic files to ignore
-*~
 *.DS_Store
 *.log
 _gsdata_/

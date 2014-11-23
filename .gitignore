@@ -1,5 +1,7 @@
 ## generic files to ignore
-*~
 *.DS_Store
 *.log
 _gsdata_/
+.Rproj.user
+Quanty.Rproj
+packrat/lib*/

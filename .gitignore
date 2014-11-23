@@ -3,3 +3,5 @@
 *.DS_Store
 *.log
 _gsdata_/
+.Rproj.user
+Quanty.Rproj

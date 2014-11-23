@@ -12,6 +12,18 @@ function toggle_visibility(id) {
 
 var x = document.getElementById("error");
 
+function plz_gdenr(plz) {
+    content=document.getElementById('content');
+    $.getJSON( "./data/json/plz_gdenr.json" )
+        .done(function( json ) {
+            content.innerHTML=json[2].4500;
+        })
+        .fail(function( jqxhr, textStatus, error ) {
+            var err = textStatus + ", " + error;
+        content.innerHTML= "Request Failed: " + err;
+});
+    
+}
 
 // ----------------------------------
 // Maps API related Functions

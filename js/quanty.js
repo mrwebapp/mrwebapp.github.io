@@ -12,7 +12,6 @@ function toggle_visibility(id) {
 
 var x = document.getElementById("error");
 
-<<<<<<< HEAD
 function plz_gdenr(plz) {
 content=document.getElementById('content');
     $.getJSON( "./data/json/plz_gdenr.json" )
@@ -26,8 +25,6 @@ content=document.getElementById('content');
 });
     
 }
-=======
->>>>>>> parent of 6c06fc6... read json test
 
 // ----------------------------------
 // Maps API related Functions

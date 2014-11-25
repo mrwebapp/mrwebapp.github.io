@@ -141,7 +141,8 @@ function showPosition(position)
      if (status == google.maps.GeocoderStatus.OK) {
       	if (results[1]) {
      	//address.innerHTML=results[0].formatted_address;
-      zip=address.innerHTML=results[1].address_components[0].long_name;
+      zip=address.innerHTML=results[0].address_components[6].long_name;
+            //content.innerHTML=JSON.stringify(results[0].address_components[6].long_name, null, '\t');;//.address_components[7].types;
 
 
    			//var zip = '4103';

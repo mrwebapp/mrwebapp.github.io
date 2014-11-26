@@ -36,7 +36,7 @@ content=document.getElementById('content');
                             
                         }
 
-                content.innerHTML=index;
+                //content.innerHTML=index;
                 pie_chart(index, json, [["Beschaefitgte im 1. Sektor"],["Beschaefitgte im 2. Sektor"],["Beschaefitgte im 3. Sektor"]] , "Beschaeftigung nach Sektor", "content");
                 })
                 .fail(function( jqxhr, textStatus, error ) {

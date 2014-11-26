@@ -16,23 +16,23 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-	<body onload="getLocation()">
-        <div class="navbar navbar-fixed-top">
-			<div class="navbar-header pull-left">
-      			<a class="navbar-brand" href="#">Quanty</a>
+<body onload="getLocation()">      <!--Start the localization function-->
+        <div class="navbar navbar-fixed-top">   <!--Bootstrap class fixed top-->
+			<div class="navbar-header pull-left"> <!--Bootstrap class nav bar left-->
+      			<a class="navbar-brand" href="#">Quanty</a> <!--Bootstrap title element, link to itself-->
     		</div>
-			<div class="navbar-header pull-right">
-				<button type="button" id="getloc" class="btn btn-default navbar-btn" onclick="getLocation();">
+			<div class="navbar-header pull-right"> <!--Bootstrap class nav bar right-->
+				<button type="button" id="getloc" class="btn btn-default navbar-btn" onclick="getLocation();"> <!--Bootstrap locaization button-->
   					<span class="glyphicon glyphicon-screenshot"></span>
 			   </button>
-                <button type="button" id="plz" class="btn btn-default navbar-btn" onclick="plz_gdenr()">
+                <button type="button" id="plz" class="btn btn-default navbar-btn" onclick="plz_gdenr()">  <!--Bootstrap search data sets button, willl be removed later-->
   					<span class="glyphicon glyphicon-search"></span>
 			   </button>
 			</div>
 		</div>
-			<div id="mapholder"></div>
-			<div id="address"></div>
-			<div id="content" class="container below-map">
+			<div id="mapholder"></div>  <!--Div for map, see quanty.js Section "Maps API related Functions"-->
+			<div id="address"></div>    <!--Div for map footer, used to display Result of Google Geo Coding, see funtion showPosition()"-->
+			<div id="content" class="container below-map"> <!--Div for content, used in different functions, e.g. for graphs"-->
 					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 		Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
@@ -41,8 +41,8 @@
 
 		Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer</p>
 				</div>
-		<div id="error" class="error"></div>
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<div id="error" class="error"></div>      <!--Div for error display"-->
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins other Java Script functions) -->
 		<script src="https://code.jquery.com/jquery.js"></script>
 		<!-- Google Maps API-->
 		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBXV2laAbwwQ1V4tPwb6oa7hxohNTUBa2o&sensor=true"></script>

@@ -22,8 +22,11 @@
       			<a class="navbar-brand" href="#">Quanty</a>
     		</div>
 			<div class="navbar-header pull-right">
-				<button type="button" id="getloc" class="btn btn-default navbar-btn" onclick="getLocation()">
+				<button type="button" id="getloc" class="btn btn-default navbar-btn" onclick="getLocation();">
   					<span class="glyphicon glyphicon-screenshot"></span>
+			   </button>
+                <button type="button" id="plz" class="btn btn-default navbar-btn" onclick="plz_gdenr()">
+  					<span class="glyphicon glyphicon-search"></span>
 			   </button>
 			</div>
 		</div>
@@ -47,6 +50,10 @@
 		<script type="text/javascript" src="js/quanty.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <!-- Highcharts -->
+        <script src="http://code.highcharts.com/highcharts.js"></script>
+        <script src="http://code.highcharts.com/modules/exporting.js"></script>
+
 
   </body>
 </html>

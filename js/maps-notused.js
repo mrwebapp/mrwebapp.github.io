@@ -13,9 +13,10 @@ function getLocation()
   {
   if (navigator.geolocation)
 	{
-	navigator.geolocation.getCurrentPosition(showPosition,showError);
+	results=navigator.geolocation.getCurrentPosition(showPosition,showError);
 	}
   else{x.innerHTML="Geolocation is not supported by this browser.";}
+      return results;
   }
 
 function showPosition(position)
@@ -40,6 +41,7 @@ function showPosition(position)
     if (status == google.maps.GeocoderStatus.OK) {
       if (results[1]) {
       address.innerHTML=results[1].address_components[0].long_name;
+          return results;
       } else {
         alert('No results found');
       }
@@ -53,7 +55,8 @@ function showPosition(position)
 	  var geoloc=$.get("http://maps.googleapis.com/maps/api/geocode/json?latlng=40.714224,-73.961452&sensor=true")
 
 
-	  address.innerHTML= geoloc.results[1].formatted_address;
+	  //address.innerHTML= geoloc.results[1].formatted_address;
+      //return geoloc.results;
   }
 
 function showError(error)
